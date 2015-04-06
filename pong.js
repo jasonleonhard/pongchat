@@ -3,7 +3,8 @@
 /*****************************************************/
 var express = require('express'),
     app = express(),
-    port = 3700,
+//    port = 3700,
+   port = 80,
     io = require('socket.io').listen(app.listen(port), { log: false });
 
 //App Config

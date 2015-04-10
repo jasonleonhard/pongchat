@@ -70,7 +70,9 @@ button {
 					display  = document.getElementsByTagName("output")[0],
 					button   = document.getElementsByTagName("button")[0],
 					content  = document.getElementById("msg");
-	 
+
+	 // messages push onto a stack
+	 // then are looped through and displayed
 			socket.on('message', function (msg) {
 					if(msg) {
 							messages.push(msg);
@@ -83,7 +85,8 @@ button {
 							console.log("There is a problem:", data);
 					}
 			});
-	 
+
+			// clicking the send message button will emit a receive...
 			button.onclick = function() {
 					socket.emit('receive', { action: 'chat', name: 'Anonymous', msg: content.value });
 			};

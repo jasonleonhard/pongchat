@@ -1,8 +1,7 @@
 x<!doctype html>
 <html lang="en">
-
 	<head>
-		<meta charset="utf-8">
+<!-- 		<meta charset="utf-8">
 
 		<title>Socket.io - Binding the front and back-end together with Node.js and Canvas</title>
 
@@ -13,7 +12,7 @@ x<!doctype html>
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+ -->
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
 
@@ -55,11 +54,11 @@ x<!doctype html>
 						<small>by <a href="http://www.soluml.com/">Benjamin Solum</a> / <a href="https://twitter.com/soluml">@soluml</a></small>
 					</p>
 				</section>
-        
+
         <section>
           <img src="memejs.jpg" />
         </section>
-        
+
         <section>
 					<h2>JavaScript in your JavaScript</h2>
 					<ol>
@@ -80,7 +79,7 @@ x<!doctype html>
           	Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 					</p>
 				</section>
-        
+
         <section data-background="#007777">
 					<h2>What is <a href="http://nodejs.org/">Node.js</a>?</h2>
 					<ol>
@@ -89,7 +88,7 @@ x<!doctype html>
             <li class="fragment">In web development, it can refer to both the server-side language and the server itself.</li>
 					</ol>
 				</section>
-        
+
        <section data-background="#007777">
 					<h2>App.js - Hello World!</h2>
           <div>
@@ -107,7 +106,7 @@ server.listen(8000);</code></pre>
 						<iframe src="text.html" height="100" style="width:90%;background:#fff;"></iframe>
           </div>
 				</section>
-        
+
         <section data-background="#007777">
 					<h2><abbr title="Node Package Manager">NPM</abbr></h2>
           <ol>
@@ -127,7 +126,7 @@ server.listen(8000);</code></pre>
             </li>
 					</ol>
 				</section>
-        
+
         <section data-background="#007777">
 					<h2><abbr title="Node Package Manager">NPM</abbr></h2>
           <ol start="3">
@@ -146,7 +145,7 @@ server.listen(8000);</code></pre>
             <li class="fragment">Great for quickly putting a server together so you can get back to programming.</li>
           </ul>
 				</section>
-        
+
         <section data-background="#4d7e65">
 		  <h2>Socket.io - Realtime App Middleware</h2>
           <p>
@@ -162,7 +161,7 @@ server.listen(8000);</code></pre>
 		  	<li class="fragment">WebSockets (standardized in 2011) "...provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections."</li>
 		  </ul>
 		</section>
-        
+
         <section data-background="#4d7e65">
 		  <h2>Socket.io - How does it work?</h2>
           <p class="left">Socket.io selects the most capable data transport at runtime while normalizing their APIs:</p>
@@ -175,7 +174,7 @@ server.listen(8000);</code></pre>
             <li>JSONP Polling</li>
           </ul>
 		</section>
-        
+
         <section data-background="#4d7e65">
 		  <h2 style="position:relative;top:-2.6em;">Socket.io - Browser Support</h2>
           <section>
@@ -200,7 +199,7 @@ server.listen(8000);</code></pre>
           </ul>
           </section>
 		</section>
-        
+
         <section data-background="#4d7e65">
 		  <h2>Socket.io - Client-Side and Server-Side</h2>
 		  <p>
@@ -218,7 +217,7 @@ server.listen(8000);</code></pre>
         <li>Disconnect:<br><pre><code class="javascript">socket.on('disconnect', function () {</code></pre></li>
 		  </ol>
 		</section>
-    
+
     <section data-background="#4d7e65">
 		  <h2>Socket.io - Messages</h2>
 		  <p>Messages are bits of data sent to "Sockets".  There are three primary ways to send messages to sockets.</p><br>
@@ -229,20 +228,20 @@ server.listen(8000);</code></pre>
       <div class="left">3. A "Room":</div>
       <pre><code class="javascript">io.sockets.in('room').emit('message', data);</code></pre>
 		</section>
-    
+
     <section data-background="#4d7e65">
 		  <h2>Socket.io - Volatile Messages</h2>
 		  <p>If the message you're sending isn't important, you can send it as "volatile".</p><br>
       <pre><code class="javascript">io.sockets.in('observers').volatile.emit('message', data);</code></pre>
 		</section>
-    
+
     <section data-background="#4d7e65">
 		  <h2>Socket.io - Rooms</h2>
 		  <p>Rooms allow you to organize sockets into groups. When a socket disconnects it automatically leaves a room.</p><br>
       <pre><code class="javascript">socket.join('players');</code></pre>
       <pre><code class="javascript">socket.leave('players');</code></pre>
 		</section>
-    
+
     <section data-background="#4d7e65">
 		  <h2><abbr title="Node Package Manager">Socket.io - NPM</abbr></h2>
           <ol>
@@ -340,7 +339,7 @@ io.sockets.on('connection', function (socket) {
         display  = document.getElementsByTagName("output")[0],
         button   = document.getElementsByTagName("button")[0],
         content  = document.getElementById("msg");
- 
+
     socket.on('message', function (data) {
         if(data.message) {
             messages.push(data.message);
@@ -353,7 +352,7 @@ io.sockets.on('connection', function (socket) {
             console.log("There is a problem:", data);
         }
     });
- 
+
     button.onclick = function() {
         socket.emit('receive', { message: content.value });
     };
@@ -366,7 +365,7 @@ io.sockets.on('connection', function (socket) {
       <h2>Socket.io - Chat Client</h2>
       <iframe src="http://localhost:3700/chat" height="500" style="width:90%;background:#fff;"></iframe>
     </section>
-    
+
     <section data-background="#714d7e">
       <h2>Canvas - The Flash Killer</h2>
       <ol>
@@ -376,7 +375,7 @@ io.sockets.on('connection', function (socket) {
         <li class="fragment">Browser Support: IE9+</li>
       </ol>
     </section>
-    
+
     <section data-background="#714d7e">
       <h2>Canvas - The Context</h2>
       <p>Not to be confused with the element itself, the Canvas's context is an object with properties and methods that let you interact with the element.</p>
@@ -386,7 +385,7 @@ var canvas = document.getElementById('canvas'),
 //The context can be 2d or webgl (3d)
 ctx = canvas.getContext('2d');</code></pre>
     </section>
-    
+
     <section data-background="#714d7e">
       <h2>Canvas - Animation</h2>
       <p>To animate a canvas, you have to clear and re-draw the image with an interval.</p>
@@ -397,7 +396,7 @@ var interval = setInterval(
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       draw();
     },
-    
+
     //Run every 33 milliseconds
     33
 );
@@ -406,10 +405,10 @@ var interval = setInterval(
 function draw() {
     ctx.beginPath();</code></pre>
     </section>
-    
-    
-    
-    
+
+
+
+
     <section>
       <h1>Demo Time!</h1>
       <a href="http://192.241.176.122:3700/" target="new"><img src="meme.jpg" /></a>
@@ -426,7 +425,7 @@ function draw() {
             <li><a href="http://sailsjs.org/">Sails.js - Realtime MVC Framework</a></li>
           </ul>
 		</section>
-        
+
     <section data-background="#8c4738">
 		  <h1>Resources</h1>
           <h3>"Socket.io"</h3>
@@ -437,7 +436,7 @@ function draw() {
             <li><a href="https://github.com/learnboost/socket.io/wiki">Socket.io Wiki</a></li>
           </ul>
 		</section>
-        
+
         <section data-background="#8c4738">
 					<h1>Resources</h1>
           <h3>"Canvas"</h3>

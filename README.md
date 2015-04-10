@@ -13,7 +13,6 @@ It will now be available at
 
 http://104.131.6.162:3700
 
-WORKS!!! so far...
 ----------------------------------------------------------------------------------------
 2. Remove that built in mena project
 
@@ -31,8 +30,10 @@ WORKS!!! so far...
 
 
 # User privilege specification
+
   root    ALL=(ALL:ALL) ALL
   demo    ALL=(ALL:ALL) ALL
+
 # Type ‘cntrl x’ to exit the file.
 # Press Y to save; press enter, and the file will save in the proper place.
 
@@ -136,3 +137,9 @@ Simple 2-player game (that everyone should recognize) using Socket.io to handle 
 _**Open /presentation/index.html to view the slides. To run the demo, in the root directory call "node pong" in the command line and direct your browser to localhost:3700**
 
 _**To see the presentation live, visit me on [Youtube](http://www.youtube.com/watch?v=qmvxytWVBJ4)!**_
+
+
+
+main javascript
+  /js/p.js
+  /pong_local.js

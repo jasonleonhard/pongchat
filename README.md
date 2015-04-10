@@ -31,8 +31,8 @@ http://104.131.6.162:3700
 
 # User privilege specification
 
-  root    ALL=(ALL:ALL) ALL
-  demo    ALL=(ALL:ALL) ALL
+    root    ALL=(ALL:ALL) ALL
+    demo    ALL=(ALL:ALL) ALL
 
 # Type ‘cntrl x’ to exit the file.
 # Press Y to save; press enter, and the file will save in the proper place.

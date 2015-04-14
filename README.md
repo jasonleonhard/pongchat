@@ -38,12 +38,16 @@ http://104.131.6.162:3700
 # Press Y to save; press enter, and the file will save in the proper place.
 
 vi /etc/ssh/sshd_config
+
   Port 25000
   Protocol 2
   PermitRootLogin no
+
 # at bottom put:
+
   UseDNS no
   AllowUsers demo
+
 :wq
 
     reload ssh

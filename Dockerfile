@@ -1,7 +1,7 @@
 FROM un5t0ppab13:pongchat
 # Node Development Server
 # https://github.com/un5t0ppab13/pongchat
-FROM debian:wheezy
+# FROM debian:wheezy
 
 # Network Ports Used by App
 EXPOSE 8080

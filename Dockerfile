@@ -1,5 +1,6 @@
+FROM un5t0ppab13:pongchat
 # Node Development Server
-# https://github.com/alexwitherspoon/bearcrud
+# https://github.com/un5t0ppab13/pongchat
 FROM debian:wheezy
 
 # Network Ports Used by App
@@ -18,7 +19,7 @@ RUN echo "Updating OS" && \
 RUN echo "Installing Base Utilties" && \
     bash -c "apt-get update -qq" && \
     bash -c "apt-get install -qq --force-yes build-essential nano ssh" && \
-    bash -c "echo 'root:bearcrud' | chpasswd" && \
+    bash -c "echo 'root:pongchat' | chpasswd" && \
     bash -c "apt-get autoremove -qq --force-yes" && \
     bash -c "apt-get clean -qq --force-yes" && \
     echo "Base Utilities Installed" && \

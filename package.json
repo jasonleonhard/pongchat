@@ -7,5 +7,7 @@
     "express": "*",
     "ejs": "*"
   },
-  "authors": "un5t0ppabl13" // starting with Benjamin Solum
+  "authors": "un5t0ppabl13"
 }
+
+// starting with Benjamin Solum
